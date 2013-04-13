@@ -1,6 +1,5 @@
 Installation
 ===============
-Getting this to run is rather simple.
 
 Copy the contents of the websearchKey.lua into the section called "Global Hotkeys" in your rc.lua.  
 
@@ -14,9 +13,12 @@ Restart awesome by:  ctrl+mod4+r and to conduct a search:
 How to conduct searches
 -----------------------
 
-After mod4+s a Web Search will pop up at the top left corner:
+After mod4+s (mod4 being the Windows Key) a prompt box will pop up at the top left corner:
 
-A typical search consists of the first letter for the search engine, and then your query.
+![web search](https://raw.github.com/esn89/searchPrompt/master/screenshots/typedin.png)
+
+
+A typical search consists of the first letter for the search engine followed by your query.
 
 - g for google
 - r for reddit
