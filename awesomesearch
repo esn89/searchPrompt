@@ -1,0 +1,42 @@
+#!/bin/bash
+		
+#places to search
+browser="firefox"
+google="http://www.google.ca/search?q="
+reddit="reddit.com/search?q="
+ebay="www.ebay.ca/sch/items/"
+ddg="https://www.duckduckgo.com/?q="
+wiki="en.wikipedia.org/wiki/"
+youtube="https://www.youtube.com/results?search_query="
+
+
+# treats the entire parameter as a string
+string=${@}
+#finds out the first letter
+bang=${string:0:1}
+#assigns the rest of the string as search terms
+length=${#string}
+searchterms=${string:2:length}
+## stformatted is the search terms with "+" placed in between 
+## spaces, because we all know how browsers hate spaces.
+stformatted=$(echo $searchterms | sed 's/ /+/g')
+ 
+if [[ "$bang" = "g" ]]; then
+        firefox "${google}$stformatted"
+elif [[ "$bang" = "r" ]]; then
+        firefox  "${reddit}$stformatted"
+elif [[ "$bang" = "d" ]]; then
+        firefox "${ddg}$stformatted"
+elif [[ "$bang" = "d" ]]; then
+        firefox "${ebay}$stformatted"
+elif [[ "$bang" = "w" ]]; then
+        #wiki search terms are a little different:
+        wikist=$(echo $searchterms | sed 's/ /_/g')
+        firefox "${wiki}$wikist"
+elif [[ "$bang" = "e" ]]; then
+        firefox "${ebay}$stformatted"
+elif [[ "$bang" = "y" ]]; then
+        firefox "${youtube}$stformatted"
+else
+        echo Strange format... exiting...
+fi
