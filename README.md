@@ -48,9 +48,9 @@ A typical search consists of the first letter for the search engine followed by 
 - e for ebay
 - y for youtube
 
-``Example``
-g sennheiser headphones
-e lenovo x201 spare battery
-w big o notation
+-- Example``
+- g sennheiser headphones
+- e lenovo x201 spare battery
+- w big o notation
 
 
