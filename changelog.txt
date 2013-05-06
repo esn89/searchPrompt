@@ -1,0 +1,23 @@
+May 05th 2013
+-------------
+
+- Switched the control statements from "if" to
+"switch-cases".
+(cleaner, easier to read)
+
+- Handling of arguments now uses $1 for the first parameter,
+and $@ for all.
+
+- Fixed an issue where entering more than two letters for
+search causes a shift in strings.
+
+- Fixed an issue where there is more than one white space
+between search engine letter and search term.
+
+- The code now pinpoints where the exact error falls in:
+  "search engine field is empty"
+  "not a valid defined search engine definition"
+  "search engine field is too long" (i.e: "yy" for youtube
+		  won't work")
+
+- Quietly exits when search engine has an error.
