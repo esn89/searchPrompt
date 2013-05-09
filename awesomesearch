@@ -1,6 +1,7 @@
 #!/bin/bash
 
 ##############################################################
+# Original Author:  Evan Ng, 2013                            #
 #                                                            #
 # Don't forget to change the locale of your search engines   #
 # to ones you to the correct locale that you are in.         #
@@ -87,9 +88,3 @@ else
     #this is the case when the searchEngine is more than a letter or not letters
     echo "search engine field parameter either too long, or empty"
 fi
-
-#echo ${searchEngine}
-#with params, we take the whole argument, then start it AFTER the index of the bang.
-#this handles white space better, and errors in case of g, gg, GGG
-
-#echo ${query:${#searchEngine}}
